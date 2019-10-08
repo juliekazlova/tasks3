@@ -1,5 +1,5 @@
-import j_lab.Student;
-import j_lab.StudentUtils;
+import by.epam.j_lab.unit3.avolzak.Student;
+import by.epam.j_lab.unit3.avolzak.StudentUtils;
 
 public class Main {
 
