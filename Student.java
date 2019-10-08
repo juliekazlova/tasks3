@@ -9,8 +9,8 @@ public class Student {
     public Student(String surname, String initials, int group, int[] marks) {
         this.surname = surname;
         this.initials = initials;
-        this.group = group;
-        this.marks = marks;
+        setGroup(group);
+        setMarks(marks);
     }
 
     public Student(){
@@ -45,10 +45,28 @@ public class Student {
     }
 
     public void setGroup(int group) {
+        if(group>0){
         this.group = group;
+        }
+        else {
+            group=-1;
+        }
     }
 
     public void setMarks(int[] marks) {
+        if(marks.length!=5){
+            this.marks=new int[5];
+            return;
+        }
+        boolean correctMarks=true;
+        for(int i=0; i<5; i++){
+            if(marks[i]<0|marks[i]>10){
+                correctMarks=false;
+            }
+        }
+        if(correct marks){
         this.marks = marks;
+        }
+        else{this.marks=new int[5];
     }
 }
