@@ -1,4 +1,4 @@
-package j_lab;
+package by.epam.j_lab.unit3.avolzak;
 
 public class TrainUtils {
     public Train[] sortById(Train[] mas){
