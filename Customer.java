@@ -1,4 +1,4 @@
-package j_lab;
+package by.epam.j_lab.unit3.avolzak;
 
 public class Customer {
     static int customersCount=0;
