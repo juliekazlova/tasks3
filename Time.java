@@ -1,24 +1,16 @@
 package by.epam.j_lab.unit3.avolzak;
 
+import java.util.Objects;
+
 public class Time {
     private int hour;
     private int minute;
     private int second;
 
     public Time(int hour, int minute, int second) {
-        this.second = second;
-        if(hour>0&&hour<24) {
-            this.hour = hour;
-        }
-        else this.hour=0;
-        if(minute>0&&minute<60) {
-            this.minute = minute;
-        }
-        else this.minute=0;
-        if(second>0&&second<60) {
-            this.second = second;
-        }
-        else this.second=0;
+        setHour(hour);
+        setMinute(minute);
+        setSecond(second);
     }
 
     public Time(){
@@ -26,6 +18,22 @@ public class Time {
         minute=0;
         second=0;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Time time = (Time) o;
+        return hour == time.hour &&
+                minute == time.minute &&
+                second == time.second;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(hour, minute, second);
+    }
+
 
     public int getHour() {
         return hour;
